@@ -20,7 +20,10 @@ export default function Questions({onChecked}) {
   // const trace = useSelector(state=> state.result.result)
   const {trace} = useSelector(state => state.questions);
 
+  useSelector(state => console.log(state))
+
   const result = useSelector(state=> state.result.result)
+  // useSelector(state =>console.log(state));
  useEffect(()=>{
   // console.log({trace, checked})
   dispatch(updateResult({trace, checked}))

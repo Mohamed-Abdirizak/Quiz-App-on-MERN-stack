@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from "react"
-import data from "../database/data"
+import data, {answers} from "../database/data"
 import { useDispatch } from "react-redux"
 // redux actions
 import * as Action from '../redux/question_reducer'
@@ -27,7 +27,7 @@ export const useFetchQuestion = () =>{
 
 
                     // dispatch
-                    dispatch(Action.startExamAction(question))
+                    dispatch(Action.startExamAction({question, answers}))
 
                     
                 }

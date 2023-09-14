@@ -23,13 +23,7 @@ const res = useSelector(state =>state.result.result)
 const dispatch = useDispatch()
 // const res = useSelector(state=>state)
 
- useEffect(()=>{
-
-  console.log(res)
-  // console.log(results)
-
-
- })
+// 
 //  const res = useSelector(state=> state.result)
 
   // next button event handler
@@ -46,6 +40,9 @@ const dispatch = useDispatch()
       dispatch(PushAnswer(check))
         
       }
+
+// reset the value of checked variable..
+      setCheck(undefined);
      
       // console.log(res)
 
