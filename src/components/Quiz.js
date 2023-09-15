@@ -68,7 +68,7 @@ const dispatch = useDispatch()
   function onChecked(check)
   {
     setCheck(check)
-    console.log(check)
+    // console.log(check)
     
 
   }

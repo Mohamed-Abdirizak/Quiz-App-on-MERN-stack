@@ -1,10 +1,11 @@
 
 
 import { useEffect, useState } from "react"
-import data, {answers} from "../database/data"
+// import data, {answers} from "../database/data"
 import { useDispatch } from "react-redux"
 // redux actions
 import * as Action from '../redux/question_reducer'
+import { getServerData } from "../helper/helper"
 
 // fetch question hook to fetch api data and set value to store
 
@@ -18,16 +19,19 @@ export const useFetchQuestion = () =>{
         // async functin fetch backend data
         (async () =>{
             try { 
-                let question = await data;
-
-                if (question.length > 0)
+                // let question = await data;
+                // http://localhost:5000/api/questions
+            //  const q =   await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`, (data) => data)
+            const [{questions, answers}] =   await getServerData("http://localhost:5000/api/questions", (data) => data)
+                console.log({questions, answers})
+                if (questions.length > 0)
                 {
                     setGetData(prev =>({...prev, isLoading: false}));
-                    setGetData(prev =>({...prev, apiData: question}));
+                    setGetData(prev =>({...prev, apiData: questions}));
 
 
                     // dispatch
-                    dispatch(Action.startExamAction({question, answers}))
+                    dispatch(Action.startExamAction({question: questions, answers}))
 
                     
                 }
