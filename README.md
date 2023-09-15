@@ -1,4 +1,5 @@
-# This is full Quiz app on MERN stack(MONGODB, EXPRESS, REACTJS AND NODEJS). but this code is one font side.
+# This is full Quiz app on MERN stack(MONGODB, EXPRESS, REACTJS AND NODEJS). 
+but this code is one font side.
 you can get server side on this link: https://github.com/Mohamed-Abdirizak/Quiz-app-server-side
 
 
