@@ -22,6 +22,7 @@ export default function Main() {
     return (
     <div className='container'>
      <h1 className='title text-light'>Quiz Application</h1>
+     <h1 className='topic '>World Countries presidents</h1>
     <ol>
      
             <li>You will be asked 10 question one after another.</li>

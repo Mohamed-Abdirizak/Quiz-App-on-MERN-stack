@@ -30,7 +30,7 @@ export default function ResultTable() {
             <tr className="table-body" key={i}>
               {/* <td></td> */}
               <td>{v?.username || ''}</td>
-              <td>{v?.attempt || 5}</td>
+              <td>{v?.attempts || 0}</td>
               <td>{v?.points || 0}</td>
               <td>{v?.achieved || ''}</td>
             </tr>

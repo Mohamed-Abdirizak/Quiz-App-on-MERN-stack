@@ -96,7 +96,7 @@ const dispatch = useDispatch()
      <div className='grid'>
       {trace > 0 ? <button className='btn prev' onClick={onPrev}>Prev</button> : <div ></div>}
       
-      {trace < 4 ? <button className='btn next' onClick={onNext}>Next</button> : <button className='btn next' onClick={onNext}>finish</button>}
+      {trace < 9 ? <button className='btn next' onClick={onNext}>Next</button> : <button className='btn next' onClick={onNext}>finish</button>}
 
      </div>
       
